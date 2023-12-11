@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{4C072946-970E-4500-854F-F01DD6F38712}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Finance_Payment.Finance_Payment.clsModule</StartupObject>
+    <RootNamespace>Finance_Payment</RootNamespace>
+    <AssemblyName>Finance_Payment</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Finance_Payment.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Finance_Payment.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SAPBusinessOneSDK, Version=1.0.0.1, Culture=neutral, PublicKeyToken=c7c3cb60e45d119f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\SAP\SAP Business One\SAPBusinessOneSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business Objects\ClsIncomingPayments.vb" />
+    <Compile Include="Business Objects\ClsJE.vb" />
+    <Compile Include="Business Objects\ClsOutgoingPayments.vb" />
+    <Compile Include="Business Objects\ClsUDF_JE.vb" />
+    <Compile Include="Business Objects\FrmAPService_Invoice.b1f.vb">
+      <DependentUpon>FrmAPService_Invoice.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Business Objects\FrmDistRule.b1f.vb">
+      <DependentUpon>FrmDistRule.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Business Objects\FrmInternalReconciliation.b1f.vb">
+      <DependentUpon>FrmInternalReconciliation.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Business Objects\FrmOutPayments.b1f.vb">
+      <DependentUpon>FrmOutPayments.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Business Objects\FrmPayInitialize.b1f.vb">
+      <DependentUpon>FrmPayInitialize.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Business Objects\FrmInPayments.b1f.vb">
+      <DependentUpon>FrmInPayments.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Business Objects\FrmPaymentMeans.b1f.vb">
+      <DependentUpon>FrmPaymentMeans.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Business Objects\Frm_GetReco_AdjustmentTrans.b1f.vb">
+      <DependentUpon>Frm_GetReco_AdjustmentTrans.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Business Objects\SysAPInvoice.vb" />
+    <Compile Include="Common\clsAddon.vb" />
+    <Compile Include="Common\clsGlobalMethods.vb" />
+    <Compile Include="Common\clsMenuEvent.vb" />
+    <Compile Include="Common\clsModule.vb" />
+    <Compile Include="Common\clsRightClickEvent.vb" />
+    <Compile Include="Common\clsTable.vb" />
+    <Compile Include="Common\ModGlobalVariables.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Business Objects\FrmAPService_Invoice.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Business Objects\FrmDistRule.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Business Objects\FrmInternalReconciliation.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Business Objects\FrmOutPayments.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Business Objects\FrmPayInitialize.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Business Objects\FrmInPayments.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Business Objects\FrmPaymentMeans.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Business Objects\Frm_GetReco_AdjustmentTrans.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Business Objects\FMS_For_Series_Selection.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
